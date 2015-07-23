@@ -4,12 +4,13 @@ Router.configure({
 });
 
 Router.route('/', function () {
-  this.layout('KantoorTemplate');
   this.render('Kantoor');
 });
 
-Router.route('/agenda', function () {
-  this.layout('AgendaTemplate');
-  this.render('Agenda');
-  this.render('AgendaFooter', {to: 'footer'});
-});
+Router.route('/agenda', {
+    onAfterAction: function () {
+      this.render('AgendaFooter', {to: 'footer'});
+      this.next();
+    }
+  }
+);
