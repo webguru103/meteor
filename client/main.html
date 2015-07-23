@@ -2,34 +2,5 @@
     <title>Meteor K360</title>
 </head>
 <body>
-{{>postSubmit}}
 
-{{>berichtenOverzicht}}
 </body>
-
-<template name="berichtenOverzicht">
-    <ul>
-        {{#each alleBerichten}}
-        <li>{{bericht}}</li>
-        {{/each}}
-    </ul>
-</template>
-
-<template name="postSubmit">
-    <form method="POST" name="bericht">
-        <table>
-            <tr>
-                <td>Gebruiker:</td>
-                <td><input type="text" name="gebruiker" /></td>
-            </tr>
-            <tr>
-                <td>Bericht:</td>
-                <td><textarea name="bericht"></textarea></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td><input type="submit" value="Verzenden"></td>
-            </tr>
-        </table>
-    </form>
-</template>
