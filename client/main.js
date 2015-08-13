@@ -9,7 +9,20 @@ Template.postSubmit.events({
     }
 });
 
+
+
 Template.berichtenOverzicht.helpers({
     alleBerichten: function(){return Berichten.find()}
 });
+
+
+Template.Kantoor.helpers({
+  alleKantoren: function(){
+     return Kantoren.find()
+  }
+});
+
+
+
 Meteor.subscribe('berichten');
+Meteor.subscribe('kantoren');
