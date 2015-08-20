@@ -10,3 +10,4 @@ accounts-base
 accounts-password
 iron:router
 accounts-ui
+dburles:google-maps

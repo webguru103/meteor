@@ -7,9 +7,14 @@ Router.route('/kantoor', function () {
   this.render('Kantoor');
 });
 
-Router.route('/', function () {
-  this.render('home');
-});
+Router.route('/', {
+	template: 'home',
+	onBeforeAction: function () {
+		GoogleMaps.load();
+		this.next();
+	}
+  }
+);
 
 Router.route('/wijzigkantoor', function () {
   this.render('wijzigkantoor');
