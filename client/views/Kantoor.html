@@ -1,18 +1,20 @@
-<template name="Kantoor">
-  <h2>Kies een kantoor</h2>
+<template name="wijzigkantoor" xmlns="http://www.w3.org/1999/html">
 
-  <ul>
-  {{#each alleKantoren}}
-    <li>{{naam}} - {{adres.straat}} {{adres.nummer}}</li>
-  {{/each}}
-</ul>
+	<h2>Kies een kantoor</h2>
 
-  {{>postSubmit}}
-  {{>berichtenOverzicht}}
+	<select id="kantoor">
+		<option value=""></option>
+		{{#each alleKantoren}}
+			<option value="{{_id}}">{{naam}}</option>
+		{{/each}}
+	</select>
 
-  {{#contentFor "footer"}}
-    Kantoor x
-  {{/contentFor}}
+	<a href="/">Home</a>
+
+	{{#contentFor "footer"}}
+        Kantoor x
+    {{/contentFor}}
+
 </template>
 
 <template name="berichtenOverzicht">

@@ -11,16 +11,29 @@ Template.postSubmit.events({
 
 
 
+Template.home.helpers({
+    selectedKantoor: function() {
+        return Kantoren.findOne({ _id: Session.get("selectedKantoor")});
+    }
+});
+
 Template.berichtenOverzicht.helpers({
-    alleBerichten: function(){return Berichten.find()}
+    alleBerichten: function(){ return Berichten.find()}
 });
 
 
-Template.Kantoor.helpers({
+Template.wijzigkantoor.helpers({
   alleKantoren: function(){
      return Kantoren.find()
   }
 });
+
+Template.wijzigkantoor.events = {
+    'change #kantoor': function(event) {
+        Session.set("selectedKantoor", event.currentTarget.value);
+    }
+}
+
 
 Meteor.subscribe('berichten');
 Meteor.subscribe('kantoren');
