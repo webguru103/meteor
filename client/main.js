@@ -22,7 +22,5 @@ Template.Kantoor.helpers({
   }
 });
 
-
-
 Meteor.subscribe('berichten');
 Meteor.subscribe('kantoren');

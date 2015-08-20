@@ -9,3 +9,4 @@ insecure
 accounts-base
 accounts-password
 iron:router
+accounts-ui
