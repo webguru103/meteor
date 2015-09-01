@@ -5,7 +5,9 @@ if (Kantoren.find({}).count() < 1) {
       straat : 'Belgielei',
       nummer: 34,
       postcode: 2018,
-      gemeente: 'Antwerpen'
+      gemeente: 'Antwerpen',
+	  lengtegraad: 4.4212,
+	  breedtegraad: 51.206
     }
   });
   Kantoren.insert({
@@ -14,7 +16,9 @@ if (Kantoren.find({}).count() < 1) {
         straat : 'Meir',
         nummer: 1,
         postcode: 2000,
-        gemeente: 'Antwerpen'
+        gemeente: 'Antwerpen',
+		lengtegraad: 4.3212,
+		breedtegraad: 51.206
       }
     }
   );
