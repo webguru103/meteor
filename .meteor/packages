@@ -11,3 +11,6 @@ accounts-password
 iron:router
 accounts-ui
 dburles:google-maps
+mquandalle:bower
+differential:vulcanize
+miro:preloader

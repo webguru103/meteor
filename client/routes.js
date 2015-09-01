@@ -1,6 +1,12 @@
 Router.configure({
   // the default layout
-  layoutTemplate: 'KantoorTemplate'
+  layoutTemplate: 'KantoorTemplate',
+  controller: PreloadController,
+  'preload': {
+    'sync': [
+      '../bower/webcomponentsjs/webcomponents.js'
+    ]
+  }
 });
 
 Router.route('/kantoor', function () {
